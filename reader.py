@@ -33,6 +33,17 @@ class access:
         except:
             return "Category does not exist"
 
+    def getLength(category) -> int:
+        ## Returns the number of quotes in the given category
+        quotes =  connect('quotes_database.db')
+        try:
+            catQuotes.execute(f"SELECT quote FROM {category}")
+            catQuotes = catQuotes.fetchall()
+            return len(catQuotes)
+
+        except:
+            return "Category does not exist"
+
 
 class append:
     ## Defines methods to edit quotes in the json file

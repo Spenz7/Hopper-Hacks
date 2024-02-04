@@ -37,7 +37,7 @@ class access:
         ## Returns the number of quotes in the given category
         quotes =  connect('quotes_database.db')
         try:
-            catQuotes.execute(f"SELECT quote FROM {category}")
+            catQuotes = quotes.execute(f"SELECT quote FROM {category}")
             catQuotes = catQuotes.fetchall()
             return len(catQuotes)
 

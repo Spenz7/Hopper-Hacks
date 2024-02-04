@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Random Quote</title>
-<title>LIST OF QUOTES</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <title>LIST OF QUOTES</title>
+    <style>
+        body {
+          background-image: url('https://img.freepik.com/premium-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72764.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+  </head>
 
-<body>
-<h1 style="text-align:center;">{{ topic }} Random Quote</h1>
-<p style="text-align:center;">{{ random_quote }}</p>
+  <body>
+    <h1 style="text-align:center;">{{ topic }} Random Quote</h1>
+    <p style="text-align:center;">{{ random_quote[0] }} - {{ random_quote[1] }}</p>
 
-<button> <a href='/random/{{topic}}'>I want another quote!!</a></button>
+    <button> <a href='/random/{{topic}}'>I want another quote!!</a></button>
 
-<p style="text-align:center;"><a href="/home">Go back to main page</a></p>
+    <p style="text-align:center;"><a href="/home">Go back to main page</a></p>
 
-</body>
-
-<style>
-    body {
-      background-image: url('https://img.freepik.com/premium-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72764.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-    
-</style>
-
+  </body>
 
 </html>

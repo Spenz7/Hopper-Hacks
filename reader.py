@@ -1,7 +1,7 @@
 ## Connect to database/log file
 
 import json
-
+import random
 
 raw = open('quotes.json', 'r+')
 quotes = json.load(raw)
@@ -9,8 +9,8 @@ raw.close()
 
 class access:
     ## Defines methods to access quotes from the json file
-    def getQuotes(category) -> list:
-        ## Returns a list of quotes from the given category
+    def getQuotesRan(category) -> str:
+        ## Returns a random quote from the given category
         cats = list(quotes.keys())
         ## Get a list of all the categories in the json
 
@@ -19,7 +19,18 @@ class access:
 
         else:
             catQuotes = quotes[category]
-            return catQuotes
+            return random.choices(catQuotes)
+
+    def getQuotesLik(category) -> str:
+        ## Returns a quote based on the number of likes
+        cats = list(quotes.keys())
+
+        if not category in cats:
+            return "Category does not exist"
+
+        else:
+            catQuotes = quotes[category]
+
 
 class append:
     ## Defines methods to edit quotes in the json file
@@ -53,3 +64,7 @@ class append:
 
         else:
             return False
+
+
+test = access()
+test.getQuotes("Family")

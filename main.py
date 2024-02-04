@@ -4,11 +4,15 @@ from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
+
+
 @app.route('/')
 def index():
+    oldquotes = []
     return render_template('quotes.html')   
 
 oldquotes = []
+
 @app.route('/random/<topic>')
 def random_quote(topic):
     # Logic to get a random quote for the specified topic
@@ -25,6 +29,8 @@ def random_quote(topic):
 
 @app.route('/home')
 def home():
+    while len(oldquotes)!=0:
+        oldquotes.pop()
     return redirect(url_for('index'))
 
 if __name__ == '__main__':

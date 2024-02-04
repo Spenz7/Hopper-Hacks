@@ -60,6 +60,3 @@ class append:
 
         except:
             return False
-
-test = access
-print(test.getQuotesRan("Family"))

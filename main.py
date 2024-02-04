@@ -25,6 +25,7 @@ def random_quote(topic):
     while newquote[0] in oldquotes: #2nd time onwards
         newquote = reader.access.getQuotesRan(topic)
     oldquotes.append(newquote[0])
+    newquote = newquote[0] + ' - ' + newquote[1]
     return render_template('listofquotes.html', random_quote=newquote, topic=topic)
 
 @app.route('/home')

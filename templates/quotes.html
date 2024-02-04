@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MOTIVATIONAL QUOTES</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTIVATIONAL QUOTES</title>
+    <style>
+      body {
+        background-image: url('https://img.freepik.com/premium-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72764.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font: sans-serif;
+        font-size: 20px;
+      }
 
-<body>
-<h1 style="text-align:center;"><b>QUOTES</b></h1>
-<h2 style="text-align:center;">Select a category:</h2>
+      button {
+        padding:7px;
+        background-color: #e0FFFF;
+        border-radius: 5px;
+        border-color: #0f0f0f;
+        border:4px;
+      }
+      button:hover{
+        padding: 7px;
+        background-color: #2d2da0;
+        color: #e0FFFF;
+        border-color: #e0FFFF;
+        border: 4px;
+      }
+      
+      a{
+        color:#0f0f0f;
+        padding: 5px;
+      }
+      a:hover{
+        padding: inherit;
+        color: inherit;
+      }
+  </style>
+  </head>
 
-<p style="text-align:center;">
-<a href="/random/motivation"><img src="{{ url_for('static', filename='Images/motivation.jpeg')}}" alt="MOTIVATION" style="width:300px;height:170px;"></a>
-<a href="/random/wisdom"><img src="{{ url_for('static', filename='Images/wisdom.jpg')}}" alt="WISDOM" style="width:300px;height:170px;"></a>
-<a href="/random/family"><img src="{{ url_for('static', filename='Images/family.jpg')}}" alt="FAMILY" style="width:300px;height:170px;"></a><br clear="all"><br clear="all">
-<a href="/random/happiness"><img src="{{ url_for('static', filename='Images/happiness.jpeg')}}" alt="HAPPINESS" style="width:300px;height:170px;"></a>
-<a href="/random/pets"><img src="{{ url_for('static', filename='Images/pets.jpeg')}}" alt="PETS" style="width:300px;height:170px;"></a></p>
+  <body>
+    <h1 style="text-align:center;"><b>QUOTES</b></h1>
+    <h2 style="text-align:center;">Select a category:</h2>
 
-<style>
-    body {
-      background-image: url('https://img.freepik.com/premium-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72764.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-    
-</style>
+    <p style="text-align:center;">
+    <a href="/random/motivation"><img src="{{ url_for('static', filename='Images/motivation.jpeg')}}" alt="MOTIVATION" style="width:300px;height:170px;"></a>
+    <a href="/random/wisdom"><img src="{{ url_for('static', filename='Images/wisdom.jpg')}}" alt="WISDOM" style="width:300px;height:170px;"></a>
+    <a href="/random/family"><img src="{{ url_for('static', filename='Images/family.jpg')}}" alt="FAMILY" style="width:300px;height:170px;"></a><br clear="all"><br clear="all">
+    <a href="/random/happiness"><img src="{{ url_for('static', filename='Images/happiness.jpeg')}}" alt="HAPPINESS" style="width:300px;height:170px;"></a>
+    <a href="/random/pets"><img src="{{ url_for('static', filename='Images/pets.jpeg')}}" alt="PETS" style="width:300px;height:170px;"></a></p>
+  </body>
 
-</body>
-</html>
+  </html>

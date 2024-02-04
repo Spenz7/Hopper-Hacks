@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Random Quote</title>
-<title>LIST OF QUOTES</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <title>LIST OF QUOTES</title>
+    <style>
+        body {
+          background-image: url('https://img.freepik.com/premium-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72764.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          font: sans-serif;
+          font-size: 20px;
+        }
 
-<style>
-  body {
-    background-image: url('https://img.freepik.com/premium-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72764.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+        button {
+          padding:7px;
+          background-color: #e0FFFF;
+          border-radius: 5px;
+          border-color: #0f0f0f;
+          border:4px;
+        }
+        button:hover{
+          padding: 7px;
+          background-color: #2d2da0;
+          color: #e0FFFF;
+          border-color: #e0FFFF;
+          border: 4px;
+        }
+        
+        a{
+          color:#0f0f0f;
+          padding: 5px;
+        }
+        a:hover{
+          padding: inherit;
+          color: inherit;
+        }
 
-  .container {
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 10vh;
         }
-</style>
 
+    </style>
+  </head>
 
+  <body>
+    <h1 style="text-align:center;">{{ topic.capitalize() }} Random Quote</h1>
+    <p style="text-align:center;">{{ random_quote }}</p>
+    <div class="container">
+    <button> <a href='/random/{{topic}}'>I want another quote!!</a></button>
+    </div>
+    <p style="text-align:center;"><a href="/home">Go back to main page</a></p>
 
-
-<body>
-<h1 style="text-align:center;">{{ topic }} Random Quote</h1>
-<p style="text-align:center;">{{ random_quote }}</p>
-
-<div class="container">
-<button> <a href='/random/{{topic}}'>I want another quote!!</a></button></body>
-</div>
-
-<p style="text-align:center;"><a href="/home">Go back to main page</a></p>
-
-</body>
-
+  </body>
 
 </html>

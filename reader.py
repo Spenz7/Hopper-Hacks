@@ -19,7 +19,7 @@ class access:
 
         else:
             catQuotes = quotes[category]
-            return random.choices(catQuotes)
+            return random.choices(catQuotes) 
 
     def getQuotesLik(category) -> str:
         ## Returns a quote based on the number of likes

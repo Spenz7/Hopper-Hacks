@@ -7,16 +7,17 @@ import datetime
 
 class access:
     ## Defines methods to access quotes from the json file
-    quotes = connect('quotes_database.db')
+    def getQuotesRan(category) -> tuple:
+        ## Method returns a random quote from the given category as a tuple
+        quotes = connect('quotes_database.db')
 
-    def getQuotesRan(category) -> str:
-        ## Method returns a random quote from the given category
         try:
             ## Try to get all quotes from selected category
-            catQuotes = quotes.execute("SELECT quote, author FROM ?", (category,))
+            catQuotes = quotes.execute(f"SELECT quote, author FROM {category}")
+            catQuotes = catQuotes.fetchall()
             ## Get a list of all the categories in the json
 
-            return random.choices(catQuotes)
+            return random.choices(catQuotes)[0]
 
         except:
             ## Raises exception when category does not exist
@@ -24,9 +25,13 @@ class access:
 
     def getQuotesLike(category) -> str:
         ## Returns a quote based on the number of likes
+        quotes = connect('quotes_database.db')
         try:
             catQuotes = quotes.execute("SELECT quote FROM ?", (category,))
+            ## Sort by likes
 
+        except:
+            return "Category does not exist"
 
 
 class append:
@@ -56,5 +61,5 @@ class append:
         except:
             return False
 
-test = access()
-test.getQuotes("Family")
+test = access
+print(test.getQuotesRan("Family"))

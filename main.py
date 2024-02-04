@@ -19,8 +19,7 @@ def index():
 def random_quote(topic):
     # Logic to get a random quote for the specified topic
     # Replace this with your actual logic to select a random quote
-    import random
-    random_quote = random.choice(quotes_database.get(topic, []))
+    random_quote = reader.access.getQuotesRan(topic)
     return render_template('listofquotes.html', random_quote=random_quote, topic=topic)
 
 if __name__ == '__main__':

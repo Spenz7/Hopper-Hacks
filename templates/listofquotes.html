@@ -11,13 +11,39 @@
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
+          font: sans-serif;
+          font-size: 20px;
+        }
+
+        button {
+          padding:7px;
+          background-color: #e0FFFF;
+          border-radius: 5px;
+          border-color: #0f0f0f;
+          border:4px;
+        }
+        button:hover{
+          padding: 7px;
+          background-color: #2d2da0;
+          color: #e0FFFF;
+          border-color: #e0FFFF;
+          border: 4px;
+        }
+        
+        a{
+          color:#0f0f0f;
+          padding: 5px;
+        }
+        a:hover{
+          padding: inherit;
+          color: inherit;
         }
     </style>
   </head>
 
   <body>
-    <h1 style="text-align:center;">{{ topic }} Random Quote</h1>
-    <p style="text-align:center;">{{ random_quote[0] }} - {{ random_quote[1] }}</p>
+    <h1 style="text-align:center;">{{ topic.capitalize() }} Random Quote</h1>
+    <p style="text-align:center;">{{ random_quote }}</p>
 
     <button> <a href='/random/{{topic}}'>I want another quote!!</a></button>
 

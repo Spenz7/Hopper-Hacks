@@ -7,16 +7,6 @@
 <title>LIST OF QUOTES</title>
 </head>
 
-<body>
-<h1 style="text-align:center;">{{ topic }} Random Quote</h1>
-<p style="text-align:center;">{{ random_quote }}</p>
-
-<button> <a href='/random/{{topic}}'>I want another quote!!</a></button>
-
-<p style="text-align:center;"><a href="/home">Go back to main page</a></p>
-
-</body>
-
 <style>
     body {
       background-image: url('https://img.freepik.com/premium-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72764.jpg');
@@ -25,7 +15,25 @@
       background-size: cover;
     }
     
+    .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 10vh;
+        }
+
 </style>
 
+<body>
+  <h1 style="text-align:center;">{{ topic }} Random Quote</h1>
+  <p style="text-align:center;">{{ random_quote }}</p>
+  
+  <div class="container">
+  <button> <a href='/random/{{topic}}'>I want another quote</a></button>
+  </div>
+  <p style="text-align:center;"><a href="/home">Go back to main page</a></p>
+  
+</body>
 
 </html>
